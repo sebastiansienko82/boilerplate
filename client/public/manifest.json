@@ -1,6 +1,6 @@
 {
-  "short_name": "NFT App Client",
-  "name": "NFT App Client",
+  "short_name": "Boilerplate App Client",
+  "name": "Boilerplate App Client",
   "start_url": ".",
   "display": "standalone",
   "theme_color": "#000000",

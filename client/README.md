@@ -1,1 +1,1 @@
-# NFT App Client
+# Boilerplate App Client
