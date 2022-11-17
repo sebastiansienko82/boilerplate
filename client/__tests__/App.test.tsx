@@ -1,10 +1,12 @@
-import React from 'react';
-import { shallow } from 'enzyme';
+import {render, screen, waitFor} from '@testing-library/react';
 import App from '../src/App';
 
 describe('App', () => {
-    it('should render a <div />', () => {
-        const container = shallow(<App />);
-        expect(container.find('div').length).toEqual(1);
+    beforeEach(async () => {
+        render(<App />);
+    });
+
+    it('Page should display Hello World', async () => {
+        await waitFor(() => screen.getByText('Hello world'));
     });
 });

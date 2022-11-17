@@ -1,4 +1,5 @@
 module.exports = {
+    'testEnvironment': 'jsdom',
     'testMatch': [
         '**/__tests__/**/?(*.)+(spec|test).+(ts|tsx|js)'
     ],

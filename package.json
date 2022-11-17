@@ -8,8 +8,8 @@
     "start": "concurrently \"yarn run server:start\" \"yarn run client:start\"",
     "prod": "node build/index.js",
     "client:install": "cd ./client && yarn",
-    "client:start": "cd ./client && PORT=3001 yarn start",
-    "server:start": "nodemon",
+    "client:start": "cd ./client && ESLINT_NO_DEV_ERRORS=true PORT=3001 yarn start",
+    "server:start": "ESLINT_NO_DEV_ERRORS=true nodemon",
     "client:build": "cd ./client && yarn build",
     "server:build": "rimraf ./build && tsc",
     "test": "jest --runInBand",
@@ -37,6 +37,7 @@
     "eslint": "8.26.0",
     "husky": "8.0.1",
     "jest": "29.2.2",
+    "jest-environment-jsdom": "29.2.2",
     "nodemon": "2.0.20",
     "rimraf": "3.0.2",
     "ts-jest": "29.0.3"

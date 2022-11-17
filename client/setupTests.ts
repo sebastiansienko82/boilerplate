@@ -3,7 +3,6 @@
 // expect(element).toHaveTextContent(/react/i)
 // learn more: https://github.com/testing-library/jest-dom
 import '@testing-library/jest-dom';
-const Enzyme = require('enzyme');
-const EnzymeAdapter = require('@wojtekmaj/enzyme-adapter-react-17');
 
-Enzyme.configure({ adapter: new EnzymeAdapter() });
+// @ts-ignore
+global.fetch = () => Promise.resolve({ json: () => { return { items: null, counter: null }; }});
